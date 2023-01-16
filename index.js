@@ -2,6 +2,8 @@ let randomInt = 0;
 let computerChoice = ""
 let userChoice = ""
 let winner = ""
+let userScore = 0;
+let computerScore = 0;
 
 function getRandomInt(){ // Sets the randomInt
   randomInt = Math.floor(Math.random() * 3);
