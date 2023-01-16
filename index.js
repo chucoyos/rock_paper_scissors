@@ -40,6 +40,22 @@ function determineWinner(userSelection, computerSelection){
     } else if (computerSelection === "paper"){
       winner = "It's a draw"
     }
+  } else if(userSelection === "rock"){
+    if(computerSelection === "rock"){
+      winner = "It's a draw";
+    } else if(computerSelection === "paper"){
+      winner = "You loose";
+    } else if(computerSelection === "scissors"){
+      winner = "You win";
+    }
+  } else if(userSelection === "scissors") {
+    if(computerSelection === "paper"){
+      winner = "You win";
+    } else if(computerSelection === "rock"){
+      winner = "You loose"
+    } else if(computerSelection === "scissors"){
+      winner = "It's a draw"
+    }
   }
 }
 
