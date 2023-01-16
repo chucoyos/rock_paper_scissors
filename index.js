@@ -38,7 +38,7 @@ function determineWinner(userSelection, computerSelection){
     } else if(computerSelection === "scissors"){
       winner = "You loose"
     } else if (computerSelection === "paper"){
-      winner === "It's a draw"
+      winner = "It's a draw"
     }
   }
 }
