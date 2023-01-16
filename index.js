@@ -24,6 +24,12 @@ function getComputerChoice(){ // sets the computerChoice variable
 function getUserChoice(){ // prompts the user for a choice
   userChoice = prompt('Paper, Rock, Scissors').toLowerCase();
 }
+function printUserChoice(){
+  document.getElementById("userChoice").innerText = "You said: " + userChoice;
+}
+function printComputerChoice(){
+  document.getElementById("computerChoice").innerText = "Computer said: " + computerChoice;
+}
 
 function printWinner(){ // prints the userChoice in a paragraph
   document.getElementById("answer").innerText = winner;
@@ -64,5 +70,7 @@ function startGame(){
   getComputerChoice();
   getUserChoice();
   determineWinner();
+  printUserChoice();
+  printComputerChoice();
   printWinner();
 }
