@@ -73,6 +73,7 @@ p {
   margin-top: 20px;
 }
 .modal {
+  display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
   left: 0;
@@ -104,7 +105,4 @@ p {
   margin-bottom: 20px;
   padding: 10px;
   margin-top: 10px;
-}
-#myModal {
-  display: block;
 }
