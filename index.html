@@ -14,7 +14,11 @@
       <h1>Rock Paper or Scissors Game</h1>
       <p class="instructions">To start the game click the button below and type your selection</p>
     </div>
-    <button onclick="startGame()">Start Game</button>
+    <div class="gameOptions">
+      <button id="paper" onclick="startGame(paper)">Paper</button>
+      <button id="rock" onclick="startGame(rock)">Rock</button>
+      <button id="scissors" onclick="startGame(scissors)">Scissors</button>
+    </div>
     <div class="scoreContainer">
       <span class="scores" id="userScore">Your score</span>
       <span class="scores" id="computerScore">Computer score</span>

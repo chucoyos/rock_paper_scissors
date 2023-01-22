@@ -1,7 +1,7 @@
 let randomInt = 0;
-let computerChoice = ""
-let userChoice = ""
-let winner = ""
+let computerChoice = "";
+let userChoice = "";
+let winner = "";
 let userScore = 0;
 let computerScore = 0;
 let rock = "rock";
@@ -26,9 +26,6 @@ function getComputerChoice(){ // sets the computerChoice variable
   } 
 }
 
-function getUserChoice(){ // prompts the user for a choice
-  userChoice = prompt(paper, rock, scissors).toLowerCase();
-}
 function printUserChoice(){
   document.getElementById("userChoice").innerText = "You said: " + userChoice;
   document.getElementById("userScore").innerText = "Your score: " + userScore;
@@ -78,10 +75,10 @@ function determineWinner(userSelection, computerSelection){
   }
 }
 
-function startGame(){
+function startGame(userSelection){
+  userChoice = userSelection;
   getRandomInt();
   getComputerChoice();
-  getUserChoice();
   determineWinner();
   printUserChoice();
   printComputerChoice();
