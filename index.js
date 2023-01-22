@@ -7,6 +7,11 @@ let computerScore = 0;
 let rock = "rock";
 let paper = "paper";
 let scissors = "scissors";
+// Get the modal
+ 
+function closeModal(){
+  document.getElementById("myModal").style.display = "none";
+}
 
 function getRandomInt(){ // Sets the randomInt
   randomInt = Math.floor(Math.random() * 3);
@@ -72,6 +77,11 @@ function determineWinner(userSelection, computerSelection){
     } else if(computerSelection === scissors){
       winner = "It's a draw " + scissors + " is equal to " + scissors;
     }
+  }
+  if(userScore === 5 || computerScore === 5){
+    document.getElementById("myModal").style.display = "block";
+    userScore = 0;
+    computerScore = 0;
   }
 }
 
