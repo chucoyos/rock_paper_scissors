@@ -8,25 +8,30 @@ button {
   margin: auto;
   border: 2px solid purple;
   box-shadow: 2px 2px;
-  border-radius: 16px;
+  border-radius: 8px;
 }
 button:hover {
-  padding-right: 25px;
+  padding-right: 15px;
+  cursor: pointer;
 }
 h1 {
   text-align: center;
+  font-size: 3rem;
 }
 p {
   text-align: center;
 }
+.instructions {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
  
 .container {
-  /* The image used */
-  background-image: url("/assets/mesh-gradient.png");
-  background-size: auto;
-  padding: 60px;
-   
+  background: rgb(2,0,36);
+  background: linear-gradient(184deg, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 47%, rgba(0,69,255,1) 100%);
   color: aliceblue;
+  height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -35,5 +40,14 @@ p {
   margin-bottom: 40px;
 }
 .results {
-  margin-top: 40px;
+  margin-top: 20px;
+  font-size: large;
+  font-weight: bolder;
+  margin-bottom: 80px;
+}
+#answer {
+  margin-top: 20px;
+  font-size: large;
+  font-weight: bolder;
+  margin-bottom: 80px;
 }
