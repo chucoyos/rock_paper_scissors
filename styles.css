@@ -4,14 +4,14 @@
   box-sizing: border-box;
 }
 button {
-  padding: 8px;
+  padding: 24px;
   margin: auto;
   border: 2px solid purple;
   box-shadow: 2px 2px;
   border-radius: 8px;
 }
 button:hover {
-  padding-right: 15px;
+  background-color: lightgray;
   cursor: pointer;
 }
 h1 {
