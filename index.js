@@ -4,6 +4,9 @@ let userChoice = ""
 let winner = ""
 let userScore = 0;
 let computerScore = 0;
+let rock = "rock";
+let paper = "paper";
+let scissors = "scissors";
 
 function getRandomInt(){ // Sets the randomInt
   randomInt = Math.floor(Math.random() * 3);
@@ -12,25 +15,27 @@ function getRandomInt(){ // Sets the randomInt
 function getComputerChoice(){ // sets the computerChoice variable
   switch (randomInt){
     case 0:
-      computerChoice = "rock";
+      computerChoice = rock;
       break;
     case 1:
-      computerChoice = "scissors";
+      computerChoice = scissors;
       break;
     case 2:
-      computerChoice = "paper";
+      computerChoice = paper;
       break;
   } 
 }
 
 function getUserChoice(){ // prompts the user for a choice
-  userChoice = prompt('Paper, Rock, Scissors').toLowerCase();
+  userChoice = prompt(paper, rock, scissors).toLowerCase();
 }
 function printUserChoice(){
   document.getElementById("userChoice").innerText = "You said: " + userChoice;
+  document.getElementById("userScore").innerText = "Your score: " + userScore;
 }
 function printComputerChoice(){
   document.getElementById("computerChoice").innerText = "Computer said: " + computerChoice;
+  document.getElementById("computerScore").innerText = "Computer score: " + computerScore;
 }
 
 function printWinner(){ // prints the userChoice in a paragraph
@@ -40,29 +45,35 @@ function printWinner(){ // prints the userChoice in a paragraph
 function determineWinner(userSelection, computerSelection){
   userSelection = userChoice;
   computerSelection = computerChoice;
-  if(userSelection === "paper"){
-    if(computerSelection === "rock"){
-      winner = "You Win"
-    } else if(computerSelection === "scissors"){
-      winner = "You loose"
-    } else if (computerSelection === "paper"){
-      winner = "It's a draw"
+  if(userSelection === paper){
+    if(computerSelection === rock){
+      winner = "You Win " + paper + " beats " + rock;
+      userScore++;
+    } else if(computerSelection === scissors){
+      winner = "You loose " + scissors + " beats " + paper;
+      computerScore++;
+    } else if (computerSelection === paper){
+      winner = "It's a draw " + paper + " is equal to " + paper; 
     }
-  } else if(userSelection === "rock"){
-    if(computerSelection === "rock"){
-      winner = "It's a draw";
-    } else if(computerSelection === "paper"){
-      winner = "You loose";
-    } else if(computerSelection === "scissors"){
-      winner = "You win";
+  } else if(userSelection === rock){
+    if(computerSelection === rock){
+      winner = "It's a draw " + rock + " is equal to " + rock;
+    } else if(computerSelection === paper){
+      winner = "You loose " + paper + " beats " + rock;
+      computerScore++;
+    } else if(computerSelection === scissors){
+      winner = "You win " + rock + " beats " + scissors;
+      userScore++;
     }
-  } else if(userSelection === "scissors") {
-    if(computerSelection === "paper"){
-      winner = "You win";
-    } else if(computerSelection === "rock"){
-      winner = "You loose"
-    } else if(computerSelection === "scissors"){
-      winner = "It's a draw"
+  } else if(userSelection === scissors) {
+    if(computerSelection === paper){
+      winner = "You win " + scissors + " beats " + paper;
+      userScore++;
+    } else if(computerSelection === rock){
+      winner = "You loose " + rock + " beats " + scissors;
+      computerScore++;
+    } else if(computerSelection === scissors){
+      winner = "It's a draw " + scissors + " is equal to " + scissors;
     }
   }
 }
